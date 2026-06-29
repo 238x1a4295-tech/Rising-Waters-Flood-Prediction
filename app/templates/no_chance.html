@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="safe-bg">
+    <div class="container fade-in">
+        <div class="alert-box success">
+            <h1 class="success-icon">✅</h1>
+            <h2>Low Flood Risk</h2>
+            <p>The current weather parameters do not indicate an imminent flood threat.</p>
+            
+            <div class="advisories">
+                <h3>Recommendations:</h3>
+                <ul>
+                    <li>Continue routine weather monitoring.</li>
+                    <li>No immediate evacuation required.</li>
+                </ul>
+            </div>
+            
+            <div class="action-section">
+                <a href="/predict" class="btn secondary-btn">New Assessment</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

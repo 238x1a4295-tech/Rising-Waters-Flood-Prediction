@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Alert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="alert-bg">
+    <div class="container fade-in">
+        <div class="alert-box danger">
+            <h1 class="warning-icon">⚠️</h1>
+            <h2>High Flood Risk Detected</h2>
+            <p>Based on the provided meteorological parameters, there is a significant chance of flooding in this district.</p>
+            
+            <div class="advisories">
+                <h3>Recommended Actions:</h3>
+                <ul>
+                    <li>Initiate early evacuation planning immediately.</li>
+                    <li>Broadcast emergency alerts to local communities.</li>
+                    <li>Mobilize disaster management teams to high-risk zones.</li>
+                </ul>
+            </div>
+            
+            <div class="action-section">
+                <a href="/predict" class="btn secondary-btn">New Assessment</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

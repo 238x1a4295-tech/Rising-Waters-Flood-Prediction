@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="alert-bg">
+    <div class="container fade-in">
+        <div class="alert-box danger">
+            <h1 class="warning-icon">🔍</h1>
+            <h2>404 - Page Not Found</h2>
+            <p>We couldn't find the page you were looking for. The link might be broken or the page may have been removed.</p>
+            
+            <div class="action-section">
+                <a href="/" class="btn secondary-btn">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

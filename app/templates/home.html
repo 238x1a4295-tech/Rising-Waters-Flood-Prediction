@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Waters: Flood Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container fade-in">
+        <header>
+            <h1>Rising Waters</h1>
+            <p class="subtitle">Intelligent Flood Risk Prediction System</p>
+        </header>
+        
+        <main class="content-box">
+            <p>Welcome to the Rising Waters early flood warning system. By leveraging advanced Machine Learning algorithms, we analyze meteorological data to predict flood probabilities.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Data-Driven</h3>
+                    <p>Powered by XGBoost, trained on comprehensive weather patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Rapid Response</h3>
+                    <p>Grants emergency services crucial hours for proactive evacuation.</p>
+                </div>
+            </div>
+            
+            <div class="action-section">
+                <a href="/predict" class="btn primary-btn">Predict Floods</a>
+                <a href="/details" class="btn secondary-btn">Project Details</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
