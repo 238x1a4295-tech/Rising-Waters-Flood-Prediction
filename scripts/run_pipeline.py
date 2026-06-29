@@ -138,7 +138,7 @@ def decisiontree(X_train, X_test, y_train, y_test):
 
 def randomForest(X_train, X_test, y_train, y_test):
     print("\n--- Random Forest Model ---")
-    rf = RandomForestClassifier(n_estimators=100, random_state=42)
+    rf = RandomForestClassifier(n_estimators=100, class_weight='balanced', random_state=42)
     rf.fit(X_train, y_train)
     y_pred = rf.predict(X_test)
     
@@ -189,7 +189,7 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = preprocess_and_split(df)
     
     _ = decisiontree(X_train, X_test, y_train, y_test)
-    _ = randomForest(X_train, X_test, y_train, y_test)
+    rf = randomForest(X_train, X_test, y_train, y_test)
     _ = KNN(X_train, X_test, y_train, y_test)
     xgb = xgboost_model(X_train, X_test, y_train, y_test)
     
@@ -197,6 +197,6 @@ if __name__ == "__main__":
     
     # Milestone 15: Saving the best model
     model_save_path = os.path.join(BASE_DIR, '../models/floods.save')
-    joblib.dump(xgb, model_save_path)
-    print(f"\nSaved XGBoost model to {model_save_path}")
+    joblib.dump(rf, model_save_path)
+    print(f"\nSaved Random Forest model (balanced) to {model_save_path}")
     print("\nPipeline execution complete!")
