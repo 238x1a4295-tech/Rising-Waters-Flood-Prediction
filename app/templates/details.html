@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .details-content {
+            text-align: left;
+        }
+        .details-content h2 {
+            color: var(--accent-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .details-content p, .details-content li {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .details-content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <header>
+            <h1>Project Details</h1>
+            <p class="subtitle">About the Rising Waters System</p>
+        </header>
+        
+        <main class="content-box details-content">
+            <h2>What is this project?</h2>
+            <p>Rising Waters is an early flood warning system that leverages meteorological data to proactively predict the likelihood of floods. Our goal is to assist emergency services and local communities by providing crucial advanced warnings for disaster preparedness.</p>
+            
+            <h2>How to use it?</h2>
+            <p>Using the system is simple:</p>
+            <ul>
+                <li>Navigate to the <strong>Predict Floods</strong> page.</li>
+                <li>Enter the required weather parameters (Temperature, Humidity, Cloud Visibility, Annual Rainfall, and Seasonal Rainfall).</li>
+                <li>Submit the form to receive an instant prediction detailing whether there is a High Flood Risk or a Low Flood Risk.</li>
+            </ul>
+
+            <h2>What methods do we use?</h2>
+            <p>The core of our system is powered by robust Machine Learning techniques:</p>
+            <ul>
+                <li><strong>Dataset:</strong> We utilize a real-world meteorological dataset containing decades of weather records.</li>
+                <li><strong>Preprocessing:</strong> The data is rigorously cleaned. Missing values are imputed using the median strategy, and outliers are neutralized using Interquartile Range (IQR) capping. The features are then normalized using a `StandardScaler`.</li>
+                <li><strong>Model Training:</strong> Multiple algorithms (Decision Trees, Random Forests, KNN) were evaluated. Our current production model uses an <strong>XGBoost Classifier</strong>, which yielded the highest accuracy (~87%) for this specific dataset.</li>
+            </ul>
+            
+            <div class="action-section" style="margin-top: 3rem;">
+                <a href="/predict" class="btn primary-btn">Start Prediction</a>
+                <a href="/" class="btn secondary-btn">Back to Home</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

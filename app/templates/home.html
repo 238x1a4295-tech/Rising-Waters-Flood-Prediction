@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Waters: Flood Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container fade-in">
+        <header>
+            <h1>Rising Waters</h1>
+            <p class="subtitle">Intelligent Flood Risk Prediction System</p>
+        </header>
+        
+        <main class="content-box">
+            <p>Welcome to the Rising Waters early flood warning system. By leveraging advanced Machine Learning algorithms, we analyze meteorological data to predict flood probabilities.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Data-Driven</h3>
+                    <p>Powered by XGBoost, trained on comprehensive weather patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Rapid Response</h3>
+                    <p>Grants emergency services crucial hours for proactive evacuation.</p>
+                </div>
+            </div>
+            
+            <h2 style="text-align:center; margin-top: 3rem; margin-bottom: 1.5rem; color:#f8fafc; font-size:1.5rem;">Understanding Risk Profiles</h2>
+            <div class="features" style="grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                <div class="feature-card" style="border-top: 4px solid var(--success);">
+                    <h3 style="color:var(--success);">Low Risk</h3>
+                    <p style="margin-bottom:0.5rem;"><strong>Annual Rainfall:</strong> < 1500mm</p>
+                    <p style="margin-bottom:0.5rem;"><strong>Humidity:</strong> Low (< 72%)</p>
+                    <p><strong>Visibility:</strong> Clear (> 35km)</p>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid #f59e0b;">
+                    <h3 style="color:#f59e0b;">Medium Risk</h3>
+                    <p style="margin-bottom:0.5rem;"><strong>Annual Rainfall:</strong> ~ 2000mm</p>
+                    <p style="margin-bottom:0.5rem;"><strong>Humidity:</strong> Moderate (~ 75%)</p>
+                    <p><strong>Visibility:</strong> Hazy (~ 25km)</p>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid var(--danger);">
+                    <h3 style="color:var(--danger);">High Risk</h3>
+                    <p style="margin-bottom:0.5rem;"><strong>Annual Rainfall:</strong> > 3000mm</p>
+                    <p style="margin-bottom:0.5rem;"><strong>Humidity:</strong> High (> 78%)</p>
+                    <p><strong>Visibility:</strong> Poor (< 15km)</p>
+                </div>
+            </div>
+            
+            <div class="action-section">
+                <a href="/predict" class="btn primary-btn">Predict Floods</a>
+                <a href="/details" class="btn secondary-btn">Project Details</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

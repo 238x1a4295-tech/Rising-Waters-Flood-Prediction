@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="alert-bg">
+    <div class="container fade-in">
+        <div class="alert-box danger">
+            <h1 class="warning-icon">❌</h1>
+            <h2>Something went wrong</h2>
+            <p>{{ error if error else 'An unexpected error occurred while processing your request.' }}</p>
+            
+            <div class="action-section">
+                <a href="/predict" class="btn secondary-btn">Try Again</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

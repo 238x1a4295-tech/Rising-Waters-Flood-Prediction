@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container fade-in">
+        <header>
+            <h1>Enter Weather Data</h1>
+            <p class="subtitle">Input meteorological parameters for assessment</p>
+        </header>
+        
+        <main class="content-box form-container">
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="Annual_Rainfall">Annual Rainfall (mm)</label>
+                    <input type="number" step="any" id="Annual_Rainfall" name="Annual_Rainfall" required placeholder="e.g. 1500">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Cloud_Visibility">Cloud Visibility (km)</label>
+                    <input type="number" step="any" id="Cloud_Visibility" name="Cloud_Visibility" required placeholder="e.g. 15">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Seasonal_Rainfall">Seasonal Rainfall (mm)</label>
+                    <input type="number" step="any" id="Seasonal_Rainfall" name="Seasonal_Rainfall" required placeholder="e.g. 800">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Temperature">Temperature (°C)</label>
+                    <input type="number" step="any" id="Temperature" name="Temperature" required placeholder="e.g. 28">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Humidity">Humidity (%)</label>
+                    <input type="number" step="any" id="Humidity" name="Humidity" required placeholder="e.g. 80">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn primary-btn pulse">Submit Data</button>
+                    <a href="/" class="btn secondary-btn">Back to Home</a>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
